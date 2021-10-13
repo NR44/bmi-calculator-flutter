@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+const kDefaultHeight = 180;
+const kDefaultWeight = 60;
+const kDefaultAge = 30;
+const kMaxAge = 105;
+const kMinAge = 5;
+const kMinWeight = 14;
 const kMaxHeight = 226.0;
 const kMinHeight = 75.0;
 const kBottomContainerHeight = 80.0;
@@ -13,7 +19,7 @@ const kLabelTextStyle = TextStyle(
   fontSize: 18,
   color: Color(0xFF8D8E98),
 );
-const kHeightTextStyle = TextStyle(
+const kNumberTextStyle = TextStyle(
   fontSize: 50,
   fontWeight: FontWeight.w900,
 );
