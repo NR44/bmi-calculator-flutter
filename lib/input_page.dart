@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/results_page.dart';
 import 'package:bmi_calculator/reusable_card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -94,7 +95,7 @@ class _InputPageState extends State<InputPage> {
                     data: SliderTheme.of(context).copyWith(
                       inactiveTrackColor: kInactiveTrackColor,
                       activeTrackColor: Colors.white,
-                      thumbColor: kThumbColorSolid,
+                      thumbColor: kCalculateBGSliderThumbColor,
                       overlayColor: kThumbColorOpaque,
                       thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15),
                       overlayShape: RoundSliderOverlayShape(overlayRadius: 30),
@@ -192,11 +193,17 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: kCalculateBGColor,
-            margin: EdgeInsets.only(top: 10),
-            width: double.infinity,
-            height: kBottomContainerHeight,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ResultsPage()));
+            },
+            child: Container(
+              child: Text('CALCULATE'),
+              color: kCalculateBGSliderThumbColor,
+              margin: EdgeInsets.only(top: 10),
+              width: double.infinity,
+              height: kBottomContainerHeight,
+            ),
           ),
         ],
       ),
